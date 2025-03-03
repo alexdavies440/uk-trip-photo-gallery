@@ -100,3 +100,11 @@ button:focus-visible {
   background-color: #1a1a1a65;
   backdrop-filter: blur(10px);
 }
+
+/* .caption {
+  visibility: hidden;
+}
+
+.caption:active {
+  visibility: visible;
+} */

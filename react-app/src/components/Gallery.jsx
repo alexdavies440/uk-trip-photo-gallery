@@ -1,3 +1,4 @@
+import Photo from "./Photo";
 
 export default function Gallery() {
 
@@ -11,7 +12,7 @@ export default function Gallery() {
    
     return (
         <div className="gallery">
-            {images.map((image) => <img src={image} alt={image}/>)}
+            {images.map((image) => <Photo path={image}/>)}
         </div>
     );
 }
