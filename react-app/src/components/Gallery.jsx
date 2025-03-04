@@ -9,10 +9,14 @@ export default function Gallery() {
     for (const img in allImages) {
         images.push(img);
     }
-   
+
     return (
         <div className="gallery">
-            {images.map((image) => <Photo path={image}/>)}
+            {images.map((image) => (
+                <div>
+                    <Photo path={image} />
+                </div>
+            ))}
         </div>
     );
 }
