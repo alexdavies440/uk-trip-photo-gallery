@@ -5,7 +5,7 @@ import Categories from './components/Categories'
 
 function App() {
 
-  const [category, setCategory] = useState("*");
+  const [category, setCategory] = useState("all");
   console.log(category);
 
   return (

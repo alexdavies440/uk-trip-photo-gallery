@@ -20,7 +20,7 @@ export default function Categories({ setCategory }) {
                 <h3>London</h3>
                 <img src="/src/assets/trip-photos/london/IMG_2269.jpeg" alt="" />
             </div>
-            <div onClick={() => setCategory("*")}>
+            <div onClick={() => setCategory("all")}>
                 <h3>View All</h3>
             </div>
         </div>
