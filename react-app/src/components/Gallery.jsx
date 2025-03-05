@@ -1,8 +1,8 @@
 import Photo from "./Photo";
 
-export default function Gallery() {
+export default function Gallery({ category }) {
 
-    const allImages = import.meta.glob('/src/assets/trip-photos/*.jpeg');
+    const allImages = import.meta.glob('/src/assets/trip-photos/' + category + '/*.jpeg', { eager: true});
 
     let images = [];
 

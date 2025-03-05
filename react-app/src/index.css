@@ -72,3 +72,16 @@ h1 {
 .banner {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+#categories {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.category-image img {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 50%;
+}
