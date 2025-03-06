@@ -21,16 +21,16 @@ h1 {
   font-size: 3rem;
 }
 
-.gallery {
+.collage {
   line-height: 2;
-  column-count: 8;
+  column-count: 20;
   column-gap: 10px;
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
 }
 
-.gallery img {
+.collage img {
   width: 100%;
   height: auto;
   box-shadow: 0 0 20px rgb(79, 79, 79);
