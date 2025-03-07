@@ -12,9 +12,12 @@ export default function Collage({ name ,photoCollection }) {
             <div>
                 <h2>{name}</h2>
                <div className="collage">
-                {photos.map((photo) => (
-                    <div>
-                        <Photo path={photo} />
+                {photos.map((photo, i) => (
+                    <div key={i}>
+                        <Photo 
+                            photo={photo}
+                            photos={photos}
+                        />
                     </div>
                 ))}
             </div> 

@@ -7,31 +7,35 @@ function App() {
   return (
     <>
       <Banner />
-      <Collage 
+      {/* <Collage
+        name="Test"
+        photoCollection={import.meta.glob('/src/assets/trip-photos/test/*.jpeg')}
+      /> */}
+      <Collage
         name="Central Bath"
         photoCollection={import.meta.glob('/src/assets/trip-photos/bath/central-bath/*.jpeg')}
       />
-      <Collage 
+      <Collage
         name="Roman Baths"
         photoCollection={import.meta.glob('/src/assets/trip-photos/bath/roman-baths/*.jpeg')}
       />
-      <Collage 
+      <Collage
         name="Dunraven Bay"
         photoCollection={import.meta.glob('/src/assets/trip-photos/wales/dunraven-bay/*.jpeg')}
       />
-      <Collage 
+      <Collage
         name="Cardiff"
         photoCollection={import.meta.glob('/src/assets/trip-photos/wales/cardiff/*.jpeg')}
       />
-      <Collage 
+      <Collage
         name="London"
         photoCollection={import.meta.glob('/src/assets/trip-photos/london/*.jpeg')}
       />
-      <Collage 
+      <Collage
         name="Natural History Museum"
         photoCollection={import.meta.glob('/src/assets/trip-photos/london/natural-history-museum/*.jpeg')}
       />
-      <Collage 
+      <Collage
         name="British Museum"
         photoCollection={import.meta.glob('/src/assets/trip-photos/london/british-museum/*.jpeg')}
       />
