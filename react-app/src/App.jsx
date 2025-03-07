@@ -9,7 +9,7 @@ function App() {
       <Banner />
       {/* <Collage
         name="Test"
-        photoCollection={import.meta.glob('/src/assets/trip-photos/test/*.jpeg')}
+        photoCollection={import.meta.glob('/src/assets/trip-photos/test/*')}
       /> */}
       <Collage
         name="Central Bath"

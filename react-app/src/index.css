@@ -58,19 +58,15 @@ h1 {
 }
 
 .close-button {
+  background-color: rgba(79, 79, 79, 0.7);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 5px;
   z-index: 2;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1rem;
   position: fixed;
   top: 0;
   right: 0;
-  color: black;
-  background-color: transparent;
-  border: none;
-}
-
-.close-button:hover {
-  text-shadow: 0 0 5px white;
 }
 
 .photo-navigation-button {
@@ -83,7 +79,7 @@ h1 {
   transition: 0.5s ease;
 }
 
-.photo-navigation-button:hover {
+.photo-navigation-button:hover, .close-button:hover {
   background-color: rgb(79, 79, 79);
   border: 2px solid #b2ccd8;
 }

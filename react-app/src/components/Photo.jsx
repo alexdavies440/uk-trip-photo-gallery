@@ -33,12 +33,12 @@ export default function Photo({ photo, photos }) {
         <div>
             {isClicked ||
                 <div onClick={() => setIsClicked(true)}>
-                    <img src={path} alt="collage photo" />
+                    <img src={photo} alt="collage photo" />
                 </div>
             }
             {isClicked &&
                 <div className="photo-focus">
-                    <button className="close-button" onClick={() => setIsClicked(false)}>X</button>
+                    <button className="close-button" onClick={() => setIsClicked(false)}>ｘ</button>
                     <img src={path} alt="collage photo" />
                     <button className="photo-navigation-button next" onClick={handleNextPhoto}>→</button>
                     <button className="photo-navigation-button previous" onClick={handlePreviousPhoto}>←</button>
