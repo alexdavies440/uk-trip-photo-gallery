@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Photo({ photo, photos }) {
 
@@ -26,6 +26,15 @@ export default function Photo({ photo, photos }) {
         else {
             setIndex(i => i - 1);
             setPath(photos[index - 1]);
+        }
+    }
+
+    function handleArrowKeys(event) {
+        if (isClicked && event.key === "ArrowLeft") {
+            return handlePreviousPhoto();
+        }
+        if (isClicked && event.key === "ArrowRight") {
+            return handleNextPhoto();
         }
     }
 
