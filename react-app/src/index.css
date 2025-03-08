@@ -3,9 +3,9 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #97acb6;
-
+  color: rgb(255, 255, 255);
+  background-color: #b2ccd8;
+  text-shadow: 0 0 12px rgba(100, 100, 100, 0.475);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,52 +21,82 @@ h1 {
   font-size: 3rem;
 }
 
-.gallery {
+.collage {
   line-height: 2;
-  column-count: 8;
+  column-count: 21;
   column-gap: 10px;
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
 }
 
-.gallery img {
+.collage img {
   width: 100%;
   height: auto;
-  box-shadow: 0 0 20px rgb(79, 79, 79);
-  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 15px azure;
+  transition: 0.5s ease;
 }
 
-.photo-focus img {
+.collage img:hover {
+  box-shadow: 0 0 10px 5px white;
+}
+
+.photo-focus {
   z-index: 1;
   position: fixed;
-  max-width: 100%;
-  max-height: 100%;
   bottom: 0;
   left: 0;
   margin: auto;
   overflow: auto;
   right: 0;
   top: 0;
+  background-color: #1a1a1ae4;
+  backdrop-filter: blur(5px);
+}
+
+.photo-focus img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  background-color: #1a1a1a65;
-  backdrop-filter: blur(20px);
 }
 
 .close-button {
+  background-color: rgba(79, 79, 79, 0.7);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 5px;
   z-index: 2;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1rem;
   position: fixed;
   top: 0;
   right: 0;
-  color: black;
-  background-color: transparent;
-  border: none;
 }
 
-.close-button:hover {
-  text-shadow: 0 0 5px white;
+.photo-navigation-button {
+  background-color: rgba(79, 79, 79, 0.7);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 20px;
+  font-size: 2rem;
+  z-index: 2;
+  transition: 0.5s ease;
+}
+
+.photo-navigation-button:hover, .close-button:hover {
+  background-color: rgb(79, 79, 79);
+  border: 2px solid #b2ccd8;
+}
+
+.next {
+  position: fixed;
+  top: 50vh;
+  right: 0;
+}
+
+.previous {
+  position: fixed;
+  top: 50vh;
+  left: 0;
 }
 
 .banner {
