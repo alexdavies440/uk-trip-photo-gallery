@@ -29,6 +29,14 @@ export default function Photo({ photo, photoArray }) {
         }
     }
 
+    function handleCloseButton() {
+        setIsClicked(false);
+        // resets path to original path, otherwise paths can drift resulting in surprise photos
+        setPath(photo);
+        setIndex(photoArray.indexOf(photo));
+        
+    }
+
     return (
         <div>
             {isClicked ||
@@ -38,7 +46,7 @@ export default function Photo({ photo, photoArray }) {
             }
             {isClicked &&
                 <div className="photo-focus">
-                    <button className="close-button" onClick={() => setIsClicked(false)}>ｘ</button>
+                    <button className="close-button" onClick={handleCloseButton}>ｘ</button>
                     <img src={path} alt="collage photo" />
                     <button className="photo-navigation-button next" onClick={handleNextPhoto}>→</button>
                     <button className="photo-navigation-button previous" onClick={handlePreviousPhoto}>←</button>
