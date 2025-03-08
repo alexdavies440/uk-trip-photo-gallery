@@ -1,40 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export default function Photo({ photo, photos }) {
+export default function Photo({ photo, photoArray }) {
 
     const [isClicked, setIsClicked] = useState(false);
     const [path, setPath] = useState(photo);
-    const [index, setIndex] = useState(photos.indexOf(photo));
+    const [index, setIndex] = useState(photoArray.indexOf(photo));
 
     function handleNextPhoto() {
 
-        if (index === photos.length - 1) {
+        if (index === photoArray.length - 1) {
             setIndex(0);
-            setPath(photos[0]);
+            setPath(photoArray[0]);
         } else {
             setIndex(index + 1);
-            setPath(photos[index + 1]);
+            setPath(photoArray[index + 1]);
         }
     }
 
     function handlePreviousPhoto() {
 
         if (index === 0) {
-            setIndex(photos.length - 1);
-            setPath(photos[photos.length - 1]);
+            setIndex(photoArray.length - 1);
+            setPath(photoArray[photoArray.length - 1]);
         }
         else {
             setIndex(i => i - 1);
-            setPath(photos[index - 1]);
-        }
-    }
-
-    function handleArrowKeys(event) {
-        if (isClicked && event.key === "ArrowLeft") {
-            return handlePreviousPhoto();
-        }
-        if (isClicked && event.key === "ArrowRight") {
-            return handleNextPhoto();
+            setPath(photoArray[index - 1]);
         }
     }
 
